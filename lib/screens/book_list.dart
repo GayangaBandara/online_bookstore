@@ -14,17 +14,18 @@ class BookListScreen extends StatelessWidget {
       'title': 'Book 2',
       'author': 'Author 2',
       'price': '\$12',
-      'image': 'assets/images/book1.jpg',
+      'image': 'assets/images/book2.jpg',
       'description': 'This is the description of Book 2.'
     },
     {
       'title': 'Book 3',
       'author': 'Author 3',
       'price': '\$15',
-      'image': 'assets/images/book1.jpg',
+      'image': 'assets/images/book3.jpg',
       'description': 'This is the description of Book 3.'
     }
   ];
+
 
   @override
   Widget build(BuildContext context) {

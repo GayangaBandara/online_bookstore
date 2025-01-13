@@ -7,7 +7,7 @@ class BookWidget extends StatelessWidget {
   final String imagePath;
   final String description;
 
-  BookWidget({
+  const BookWidget({super.key, 
     required this.title,
     required this.author,
     required this.price,
@@ -34,7 +34,7 @@ class BookWidget extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 8.0),
             child: Text(
               'by $author',
-              style: TextStyle(fontSize: 16, color: Colors.grey),
+              style: TextStyle(fontSize: 16, color: const Color.fromARGB(255, 158, 158, 158)),
               textAlign: TextAlign.center, // Centering author name
             ),
           ),
