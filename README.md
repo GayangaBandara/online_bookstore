@@ -1,4 +1,3 @@
-```markdown
 # 📚 Online Bookstore App
 
 Welcome to the **Online Bookstore App**, your gateway to a world of books! This Flutter-based app is designed to provide a seamless, intuitive, and visually appealing way to browse, explore, and purchase your favorite books.
@@ -16,19 +15,6 @@ Welcome to the **Online Bookstore App**, your gateway to a world of books! This 
 ---
 
 ## 📂 Project Structure
-
-```
-.
-├── lib/
-│   ├── main.dart           # App entry point
-│   ├── screens/
-│   │   └── book_list.dart  # Main screen to display book list
-│   ├── widgets/
-│   │   └── book.dart       # Book card widget
-├── assets/
-│   └── images/             # Folder for book images
-├── pubspec.yaml            # Dependencies and assets configuration
-```
 
 ## 🛠️ Built With
 
@@ -48,6 +34,6 @@ Welcome to the **Online Bookstore App**, your gateway to a world of books! This 
 ---
 
 **Happy Reading! 📚**
-``` 
+
 
 This `README.md` is creative, informative, and structured, providing an engaging overview of your project. Let me know if you’d like to make further adjustments! 😊
