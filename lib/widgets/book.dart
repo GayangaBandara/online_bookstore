@@ -19,7 +19,7 @@ class BookWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.blue[50], // Light blue background for the bookstore
+      color: const Color.fromARGB(255, 145, 163, 245), // Light blue background for the bookstore
       child: Card(
         margin: EdgeInsets.all(5),
         child: Column(
@@ -37,7 +37,11 @@ class BookWidget extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 8.0),
               child: Text(
                 'by $author',
-                style: TextStyle(fontSize: 16, color: const Color.fromARGB(255, 158, 158, 158)),
+                style: TextStyle(
+                  fontSize: 16,
+                  fontStyle: FontStyle.italic, // Author name in italic
+                  color: const Color.fromARGB(255, 76, 144, 247),
+                ),
                 textAlign: TextAlign.center, // Centering author name
               ),
             ),
@@ -74,19 +78,27 @@ class BookWidget extends StatelessWidget {
                 children: <Widget>[
                   Text(
                     price,
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
                   ),
-                  SizedBox(width: 20, height: 50), // Adds more spacing between price and button
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color.fromARGB(48, 33, 149, 243), // Blue color for the button
-                    ),
-                    onPressed: () {
-                      // Add to cart functionality here
-                    },
-                    child: Text(
-                      'Add to Cart',
-                      style: TextStyle(fontWeight: FontWeight.bold), // Bold text for button
+                  SizedBox(width: 20, height: 50), // Adds spacing between price and button
+                  SizedBox(
+                    width: 120, // Set button width
+                    height:30, // Set button height
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor:
+                            const Color.fromARGB(202, 255, 255, 255), // Button color
+                      ),
+                      onPressed: () {
+                        // Add to cart functionality here
+                      },
+                      child: Text(
+                        'Add to Cart',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold, // Bold text for button
+                          fontSize: 14, // Slightly increased font size
+                        ),
+                      ),
                     ),
                   ),
                 ],

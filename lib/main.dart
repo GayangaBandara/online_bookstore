@@ -11,6 +11,7 @@ class OnlineBookStoreApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Online Bookstore',
+      debugShowCheckedModeBanner: false, // Removes the DEBUG banner
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
