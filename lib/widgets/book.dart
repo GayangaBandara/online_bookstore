@@ -19,14 +19,14 @@ class BookWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: const Color.fromARGB(255, 145, 163, 245), // Light blue background for the bookstore
+      color: const Color.fromARGB(255, 131, 141, 201), // Changed panel background color
       child: Card(
         margin: EdgeInsets.all(5),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.symmetric(vertical: 4.0), // Reduced vertical padding
               child: Text(
                 title,
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
@@ -34,13 +34,13 @@ class BookWidget extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8.0),
+              padding: const EdgeInsets.symmetric(vertical: 2.0), // Reduced vertical padding
               child: Text(
                 'by $author',
                 style: TextStyle(
                   fontSize: 16,
                   fontStyle: FontStyle.italic, // Author name in italic
-                  color: const Color.fromARGB(255, 76, 144, 247),
+                  color: const Color.fromARGB(255, 21, 74, 153),
                 ),
                 textAlign: TextAlign.center, // Centering author name
               ),
@@ -82,8 +82,8 @@ class BookWidget extends StatelessWidget {
                   ),
                   SizedBox(width: 20, height: 50), // Adds spacing between price and button
                   SizedBox(
-                    width: 120, // Set button width
-                    height:30, // Set button height
+                    width: 110, // Set button width
+                    height: 30, // Set button height
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         backgroundColor:
@@ -96,7 +96,7 @@ class BookWidget extends StatelessWidget {
                         'Add to Cart',
                         style: TextStyle(
                           fontWeight: FontWeight.bold, // Bold text for button
-                          fontSize: 14, // Slightly increased font size
+                          fontSize: 11, // Slightly increased font size
                         ),
                       ),
                     ),
