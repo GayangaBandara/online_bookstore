@@ -26,6 +26,27 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Online Bookstore'),
+        actions: [
+          PopupMenuButton<String>(
+            onSelected: (value) {
+              if (value == 'Profile') {
+                // Navigate to Profile (or show Profile screen)
+              } else if (value == 'Cart') {
+                _onItemTapped(1); // Open Cart
+              } else if (value == 'Settings') {
+                // Navigate to Settings (or show Settings screen)
+              }
+            },
+            itemBuilder: (context) => [
+              PopupMenuItem(value: 'Profile', child: Text('Profile')),
+              PopupMenuItem(value: 'Cart', child: Text('Cart')),
+              PopupMenuItem(value: 'Settings', child: Text('Settings')),
+            ],
+          ),
+        ],
+      ),
       body: _screens[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,

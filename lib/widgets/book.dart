@@ -29,7 +29,33 @@ class BookWidget extends StatelessWidget {
           children: <Widget>[
             Text(title, style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
             Text('by $author', style: TextStyle(fontSize: 16, fontStyle: FontStyle.italic)),
-            Image.asset(imagePath, height: 250, fit: BoxFit.cover),
+            GestureDetector(
+              onTap: () {
+                showDialog(
+                  context: context,
+                  builder: (context) => AlertDialog(
+                    title: Text(title),
+                    content: SingleChildScrollView(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Image.asset(imagePath, height: 200, fit: BoxFit.cover),
+                          SizedBox(height: 10),
+                          Text(description, style: TextStyle(fontSize: 14)),
+                        ],
+                      ),
+                    ),
+                    actions: [
+                      TextButton(
+                        onPressed: () => Navigator.of(context).pop(),
+                        child: Text('Close'),
+                      ),
+                    ],
+                  ),
+                );
+              },
+              child: Image.asset(imagePath, height: 250, fit: BoxFit.cover),
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -42,6 +68,7 @@ class BookWidget extends StatelessWidget {
                       'author': author,
                       'price': price,
                       'image': imagePath,
+                      'description': description,
                     });
                     ScaffoldMessenger.of(context).showSnackBar(
                       SnackBar(content: Text('$title added to cart!')),
