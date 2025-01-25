@@ -30,7 +30,7 @@ class BookListScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Bookstore'),
+        title: Text('Online Bookstore'),
       ),
       body: ListView.builder(
         itemCount: books.length,

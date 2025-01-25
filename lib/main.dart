@@ -1,21 +1,29 @@
 import 'package:flutter/material.dart';
 import 'screens/book_list.dart';
+import 'screens/navigation_bar.dart';
+import 'providers/cart_provider.dart';
+import 'package:provider/provider.dart';
+import 'screens/navigation_menu.dart';
 
 void main() {
-  runApp(OnlineBookStoreApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => CartProvider(),
+      child: OnlineBookStoreApp(),
+    ),
+  );
 }
 
-// ignore: use_key_in_widget_constructors
 class OnlineBookStoreApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Bookstore',
-      debugShowCheckedModeBanner: false, // Removes the DEBUG banner
+      title: 'Online Bookstore',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: BookListScreen(),
+      home: NavigationBarScreen(),
     );
   }
 }
