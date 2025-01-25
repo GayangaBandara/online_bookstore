@@ -21,14 +21,14 @@ class BookWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.white,
+      color: const Color.fromARGB(255, 125, 152, 153),
       child: Card(
         margin: EdgeInsets.all(5),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             Text(title, style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-            Text('by $author', style: TextStyle(fontSize: 16, fontStyle: FontStyle.italic)),
+            Text('by $author', style: TextStyle(fontSize: 16, fontStyle: FontStyle.italic, color: const Color.fromARGB(255, 48, 93, 119))),
             GestureDetector(
               onTap: () {
                 showDialog(
