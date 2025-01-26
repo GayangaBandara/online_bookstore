@@ -14,6 +14,8 @@ void main() {
 }
 
 class OnlineBookStoreApp extends StatelessWidget {
+  const OnlineBookStoreApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

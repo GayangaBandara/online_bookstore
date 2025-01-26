@@ -5,6 +5,8 @@ import 'package:provider/provider.dart';
 import '../providers/cart_provider.dart';
 
 class NavigationBarScreen extends StatefulWidget {
+  const NavigationBarScreen({super.key});
+
   @override
   _NavigationBarScreenState createState() => _NavigationBarScreenState();
 }
