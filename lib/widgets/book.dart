@@ -30,6 +30,7 @@ class BookWidget extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
+            const SizedBox(height: 10),
             Text(
               title,
               style: const TextStyle(
@@ -93,7 +94,7 @@ class BookWidget extends StatelessWidget {
               },
               child: Column(
                 children: [
-                  Image.asset(imagePath, height: 220, fit: BoxFit.cover),
+                  Image.asset(imagePath, height: 250, fit: BoxFit.cover),
                   const SizedBox(height: 10), // Added space after the image
                 ],
               ),
@@ -115,8 +116,7 @@ class BookWidget extends StatelessWidget {
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     foregroundColor: const Color.fromARGB(255, 14, 14, 14),
-                    backgroundColor: const Color.fromARGB(
-                        255, 177, 219, 224), // Changed button text color
+                    backgroundColor: const Color.fromARGB(255, 154, 174, 212), // Changed button text color
                   ),
                   onPressed: () {
                     Provider.of<CartProvider>(context, listen: false)
@@ -135,8 +135,7 @@ class BookWidget extends StatelessWidget {
                             color: Color.fromARGB(255, 255, 255, 255),
                           ), // Changed snackbar text color
                         ),
-                        backgroundColor: const Color.fromARGB(255, 0, 51,
-                            102), // Changed snackbar background color
+                        backgroundColor: const Color.fromARGB(255, 84, 125, 167), // Changed snackbar background color
                       ),
                     );
                   },
