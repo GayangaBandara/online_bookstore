@@ -40,14 +40,11 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
                 // Navigate to Profile (or show Profile screen)
               } else if (value == 'Cart') {
                 _onItemTapped(1); // Open Cart
-              } else if (value == 'Settings') {
-                // Navigate to Settings (or show Settings screen)
-              }
+              } 
             },
             itemBuilder: (context) => [
               PopupMenuItem(value: 'Profile', child: Text('Profile')),
               PopupMenuItem(value: 'Cart', child: Text('Cart')),
-              PopupMenuItem(value: 'Settings', child: Text('Settings')),
             ],
           ),
         ],
@@ -58,8 +55,7 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
         onTap: _onItemTapped,
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.shopping_cart), label: 'Cart'),
+          BottomNavigationBarItem(icon: Icon(Icons.shopping_cart), label: 'Cart'),
           BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
         ],
       ),
