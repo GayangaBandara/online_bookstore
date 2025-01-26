@@ -3,6 +3,7 @@ import 'package:online_bookstore/screens/book_list.dart';
 import 'package:online_bookstore/screens/cart_screen.dart';
 import 'package:provider/provider.dart';
 import '../providers/cart_provider.dart';
+import 'package:online_bookstore/screens/profile.dart';
 
 class NavigationBarScreen extends StatefulWidget {
   const NavigationBarScreen({super.key});
@@ -17,6 +18,7 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
   final List<Widget> _screens = [
     BookListScreen(),
     CartScreen(),
+    ProfileScreen(),
   ];
 
   void _onItemTapped(int index) {

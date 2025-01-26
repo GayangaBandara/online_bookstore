@@ -3,6 +3,7 @@ import 'screens/book_list.dart';
 import 'screens/navigation_bar.dart';
 import 'providers/cart_provider.dart';
 import 'package:provider/provider.dart';
+import 'screens/profile.dart';
 
 void main() {
   runApp(
