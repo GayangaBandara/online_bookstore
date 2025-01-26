@@ -78,7 +78,12 @@ class BookWidget extends StatelessWidget {
                   ),
                 );
               },
-              child: Image.asset(imagePath, height: 250, fit: BoxFit.cover),
+              child: Column(
+                children: [
+                  Image.asset(imagePath, height: 250, fit: BoxFit.cover),
+                  SizedBox(height: 8), // Added space after the image
+                ],
+              ),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -90,7 +95,7 @@ class BookWidget extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                       color: const Color.fromARGB(255, 10, 10, 10)), // Changed price text color
                 ),
-                SizedBox(width: 20),
+                SizedBox(width: 15), // Added more space between price and button
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     foregroundColor: const Color.fromARGB(255, 14, 14, 14),
@@ -116,7 +121,7 @@ class BookWidget extends StatelessWidget {
                       ),
                     );
                   },
-                  child: Text('Add to Cart'),
+                child: Text('Add to Cart'),
                 ),
               ],
             ),
