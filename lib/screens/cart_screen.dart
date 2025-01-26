@@ -26,9 +26,12 @@ class CartScreen extends StatelessWidget {
                   trailing: IconButton(
                     icon: Icon(Icons.remove_circle),
                     onPressed: () {
-                      Provider.of<CartProvider>(context, listen: false).removeFromCart(book);
+                      Provider.of<CartProvider>(context, listen: false)
+                          .removeFromCart(book);
                       ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(content: Text('${book['title']} removed from cart')),
+                        SnackBar(
+                            content:
+                                Text('${book['title']} removed from cart')),
                       );
                     },
                   ),

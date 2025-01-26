@@ -9,7 +9,8 @@ class ProfileScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Profile'),
       ),
-      body: SingleChildScrollView( // Make the body scrollable
+      body: SingleChildScrollView(
+        // Make the body scrollable
         padding: const EdgeInsets.all(20.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -18,7 +19,8 @@ class ProfileScreen extends StatelessWidget {
             Center(
               child: CircleAvatar(
                 radius: 60,
-                backgroundImage: NetworkImage('https://avatars.githubusercontent.com/u/135960353?v=4'), // Replace with dynamic image
+                backgroundImage: NetworkImage(
+                    'https://avatars.githubusercontent.com/u/135960353?v=4'), // Replace with dynamic image
               ),
             ),
             const SizedBox(height: 20),
@@ -52,13 +54,14 @@ class ProfileScreen extends StatelessWidget {
             // Example Order List
             ListView.builder(
               shrinkWrap: true,
-              itemCount: 5, // Replace with dynamic count of orders
+              itemCount: 2, // Replace with dynamic count of orders
               itemBuilder: (context, index) {
                 return Card(
                   margin: const EdgeInsets.symmetric(vertical: 5),
                   child: ListTile(
                     title: Text('Order #123$index'),
-                    subtitle: Text('Order Date: 2025-01-01\nSummary: Book 1, Book 2'),
+                    subtitle:
+                        Text('Order Date: 2025-01-01\nSummary: Book 1, Book 2'),
                     onTap: () {
                       // Show order details or navigate to order details screen
                     },
@@ -76,7 +79,7 @@ class ProfileScreen extends StatelessWidget {
             const SizedBox(height: 10),
             ListView.builder(
               shrinkWrap: true,
-              itemCount: 3, // Replace with dynamic count of wishlist items
+              itemCount: 2, // Replace with dynamic count of wishlist items
               itemBuilder: (context, index) {
                 return Card(
                   margin: const EdgeInsets.symmetric(vertical: 5),
@@ -102,7 +105,7 @@ class ProfileScreen extends StatelessWidget {
             const SizedBox(height: 10),
             ListTile(
               title: const Text('Shipping Address'),
-              subtitle: const Text('123 Street, City, Country'),
+              subtitle: const Text('SLTC, Meepe, Colombo'),
               trailing: IconButton(
                 icon: const Icon(Icons.edit),
                 onPressed: () {
@@ -137,7 +140,7 @@ class ProfileScreen extends StatelessWidget {
             const SizedBox(height: 10),
             ListView.builder(
               shrinkWrap: true,
-              itemCount: 3, // Replace with dynamic count of notifications
+              itemCount: 2, // Replace with dynamic count of notifications
               itemBuilder: (context, index) {
                 return Card(
                   margin: const EdgeInsets.symmetric(vertical: 5),

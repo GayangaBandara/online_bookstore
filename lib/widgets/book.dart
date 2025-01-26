@@ -93,7 +93,7 @@ class BookWidget extends StatelessWidget {
               },
               child: Column(
                 children: [
-                  Image.asset(imagePath, height: 250, fit: BoxFit.cover),
+                  Image.asset(imagePath, height: 220, fit: BoxFit.cover),
                   const SizedBox(height: 10), // Added space after the image
                 ],
               ),

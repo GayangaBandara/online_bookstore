@@ -36,6 +36,7 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
           PopupMenuButton<String>(
             onSelected: (value) {
               if (value == 'Profile') {
+                _onItemTapped(2);
                 // Navigate to Profile (or show Profile screen)
               } else if (value == 'Cart') {
                 _onItemTapped(1); // Open Cart
@@ -57,7 +58,8 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
         onTap: _onItemTapped,
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-          BottomNavigationBarItem(icon: Icon(Icons.shopping_cart), label: 'Cart'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.shopping_cart), label: 'Cart'),
           BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
         ],
       ),
