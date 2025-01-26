@@ -21,25 +21,29 @@ class BookWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: const Color.fromARGB(255, 177, 219, 224), // Changed main container background color
+      color: const Color.fromARGB(
+          255, 177, 219, 224), // Changed main container background color
       child: Card(
         color: const Color.fromARGB(
             210, 255, 255, 255), // Changed card background color
-        margin: EdgeInsets.all(5),
+        margin: const EdgeInsets.all(5),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            Text(title,
-                style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: const Color.fromARGB(232, 0, 0, 0))), // Changed title text color
+            Text(
+              title,
+              style: const TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+                color: Color.fromARGB(232, 0, 0, 0),
+              ), // Changed title text color
+            ),
             Text(
               'by $author',
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 16,
                 fontStyle: FontStyle.italic,
-                color: const Color.fromARGB(
+                color: Color.fromARGB(
                     255, 56, 116, 206), // Changed author text color
               ),
             ),
@@ -48,31 +52,40 @@ class BookWidget extends StatelessWidget {
                 showDialog(
                   context: context,
                   builder: (context) => AlertDialog(
-                    backgroundColor: const Color.fromARGB(255, 255, 255, 255), // Changed dialog background color
-                    title: Text(title,
-                        style: TextStyle(
-                            color: const Color.fromARGB(255, 129, 150, 172))), // Changed dialog title text color
+                    backgroundColor: const Color.fromARGB(
+                        255, 255, 255, 255), // Changed dialog background color
+                    title: Text(
+                      title,
+                      style: const TextStyle(
+                        color: Color.fromARGB(255, 129, 150, 172),
+                      ), // Changed dialog title text color
+                    ),
                     content: SingleChildScrollView(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Image.asset(imagePath,
                               height: 200, fit: BoxFit.cover),
-                          SizedBox(height: 10),
-                          Text(description,
-                              style: TextStyle(
-                                  fontSize: 14,
-                                  color: const Color.fromARGB(255, 77, 77,
-                                      77))), // Changed description text color
+                          const SizedBox(height: 10),
+                          Text(
+                            description,
+                            style: const TextStyle(
+                              fontSize: 14,
+                              color: Color.fromARGB(255, 77, 77, 77),
+                            ), // Changed description text color
+                          ),
                         ],
                       ),
                     ),
                     actions: [
                       TextButton(
                         onPressed: () => Navigator.of(context).pop(),
-                        child: Text('Close',
-                            style: TextStyle(
-                                color: const Color.fromARGB(255, 12, 12, 12))), // Changed close button text color
+                        child: const Text(
+                          'Close',
+                          style: TextStyle(
+                            color: Color.fromARGB(255, 12, 12, 12),
+                          ), // Changed close button text color
+                        ),
                       ),
                     ],
                   ),
@@ -81,7 +94,7 @@ class BookWidget extends StatelessWidget {
               child: Column(
                 children: [
                   Image.asset(imagePath, height: 250, fit: BoxFit.cover),
-                  SizedBox(height: 8), // Added space after the image
+                  const SizedBox(height: 10), // Added space after the image
                 ],
               ),
             ),
@@ -90,16 +103,20 @@ class BookWidget extends StatelessWidget {
               children: [
                 Text(
                   price,
-                  style: TextStyle(
-                      fontSize: 12,
-                      fontWeight: FontWeight.bold,
-                      color: const Color.fromARGB(255, 10, 10, 10)), // Changed price text color
+                  style: const TextStyle(
+                    fontSize: 12,
+                    fontWeight: FontWeight.bold,
+                    color: Color.fromARGB(
+                        255, 10, 10, 10), // Changed price text color
+                  ),
                 ),
-                SizedBox(width: 15), // Added more space between price and button
+                const SizedBox(
+                    width: 20), // Increased space between price and button
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     foregroundColor: const Color.fromARGB(255, 14, 14, 14),
-                    backgroundColor: const Color.fromARGB(255, 171, 194, 216), // Changed button text color
+                    backgroundColor: const Color.fromARGB(
+                        255, 177, 219, 224), // Changed button text color
                   ),
                   onPressed: () {
                     Provider.of<CartProvider>(context, listen: false)
@@ -112,19 +129,22 @@ class BookWidget extends StatelessWidget {
                     });
                     ScaffoldMessenger.of(context).showSnackBar(
                       SnackBar(
-                        content: Text('$title added to cart!',
-                            style: TextStyle(
-                                color: const Color.fromARGB(255, 255, 255,
-                                    255))), // Changed snackbar text color
+                        content: Text(
+                          '$title added to cart!',
+                          style: const TextStyle(
+                            color: Color.fromARGB(255, 255, 255, 255),
+                          ), // Changed snackbar text color
+                        ),
                         backgroundColor: const Color.fromARGB(255, 0, 51,
                             102), // Changed snackbar background color
                       ),
                     );
                   },
-                child: Text('Add to Cart'),
+                  child: const Text('Add to Cart'),
                 ),
               ],
             ),
+            const SizedBox(height: 10), // Added space after the row for balance
           ],
         ),
       ),

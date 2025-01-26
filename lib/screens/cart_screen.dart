@@ -22,7 +22,7 @@ class CartScreen extends StatelessWidget {
                 return ListTile(
                   leading: Image.asset(book['image']!, width: 50),
                   title: Text(book['title']!),
-                  subtitle: Text('by ${book['author']} - \$${book['price']}'),
+                  subtitle: Text('by ${book['author']} - ${book['price']}'),
                   trailing: IconButton(
                     icon: Icon(Icons.remove_circle),
                     onPressed: () {
