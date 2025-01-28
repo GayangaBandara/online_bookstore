@@ -21,8 +21,7 @@ class BookWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: const Color.fromARGB(
-          255, 177, 219, 224), // Changed main container background color
+      color: const Color.fromRGBO(177, 219, 224, 1), // Changed main container background color
       child: Card(
         color: const Color.fromARGB(
             210, 255, 255, 255), // Changed card background color

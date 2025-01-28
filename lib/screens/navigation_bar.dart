@@ -31,20 +31,33 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Online Bookstore'),
+        backgroundColor: const Color.fromARGB(169, 191, 190, 247), // AppBar background color
+        title: Text(
+          'Online Bookstore',
+          style: TextStyle(color: const Color.fromARGB(255, 0, 0, 0)), // Title text color
+        ),
         actions: [
           PopupMenuButton<String>(
+            icon: Icon(
+              Icons.more_vert,
+              color: const Color.fromARGB(255, 0, 0, 0), // Icon color
+            ),
             onSelected: (value) {
               if (value == 'Profile') {
                 _onItemTapped(2);
-                // Navigate to Profile (or show Profile screen)
               } else if (value == 'Cart') {
-                _onItemTapped(1); // Open Cart
-              } 
+                _onItemTapped(1);
+              }
             },
             itemBuilder: (context) => [
-              PopupMenuItem(value: 'Profile', child: Text('Profile')),
-              PopupMenuItem(value: 'Cart', child: Text('Cart')),
+              PopupMenuItem(
+                value: 'Profile',
+                child: Text('Profile', style: TextStyle(color: Colors.deepPurple)), // Menu item color
+              ),
+              PopupMenuItem(
+                value: 'Cart',
+                child: Text('Cart', style: TextStyle(color: Colors.deepPurple)), // Menu item color
+              ),
             ],
           ),
         ],
@@ -53,6 +66,9 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
+        backgroundColor: Color.fromARGB(169, 191, 190, 247), // BottomNavigationBar background color
+        selectedItemColor: Color.fromRGBO(65, 106, 168, 1), // Selected icon and label color
+        unselectedItemColor: const Color.fromARGB(255, 0, 0, 0), // Unselected icon and label color
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
           BottomNavigationBarItem(icon: Icon(Icons.shopping_cart), label: 'Cart'),
