@@ -23,8 +23,7 @@ class BookWidget extends StatelessWidget {
     return Container(
       color: const Color.fromRGBO(177, 219, 224, 1), // Changed main container background color
       child: Card(
-        color: const Color.fromARGB(
-            210, 255, 255, 255), // Changed card background color
+        color: const Color.fromARGB(255, 255, 255, 255), // Changed card background color
         margin: const EdgeInsets.all(5),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
