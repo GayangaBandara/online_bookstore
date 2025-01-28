@@ -114,8 +114,8 @@ class BookWidget extends StatelessWidget {
                     width: 20), // Increased space between price and button
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    foregroundColor: const Color.fromARGB(255, 14, 14, 14),
-                    backgroundColor: const Color.fromARGB(255, 154, 174, 212), // Changed button text color
+                    foregroundColor: const Color.fromARGB(255, 0, 0, 0),
+                    backgroundColor: const Color.fromARGB(255, 191, 190, 247), // Changed button text color
                   ),
                   onPressed: () {
                     Provider.of<CartProvider>(context, listen: false)
@@ -134,7 +134,7 @@ class BookWidget extends StatelessWidget {
                             color: Color.fromARGB(255, 255, 255, 255),
                           ), // Changed snackbar text color
                         ),
-                        backgroundColor: const Color.fromARGB(255, 84, 125, 167), // Changed snackbar background color
+                        backgroundColor: const Color.fromARGB(255, 191, 190, 247), // Changed snackbar background color
                       ),
                     );
                   },
